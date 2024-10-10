@@ -83,3 +83,8 @@ if (NOT TARGET Zydis::Zydis)
         add_library(Zydis::Zydis ALIAS Zydis)
     endif()
 endif()
+
+if (NOT TARGET Boost::boost)
+    add_subdirectory(boost)
+    add_library(Boost::boost ALIAS boost)
+endif()
